@@ -56,9 +56,6 @@ class BackgroundService : Service() {
                     if (vpnService != null) {
                         startActivity(vpnService)
                     }
-//                    startService(getServiceIntent().setAction(ToyVpnService.ACTION_CONNECT));
-//                    startService(getServiceIntent().setAction(ToyVpnService.ACTION_DISCONNECT));
-
                     //DO HERE
                 } else if (intent.action == Intent.ACTION_SCREEN_ON) {
                     Log.d("broadcast", "ACTION_SCREEN_ON")
@@ -111,7 +108,4 @@ class BackgroundService : Service() {
     }
 
 
-    private fun getServiceIntent(): Intent {
-        return Intent(this, ToyVpnService::class.java)
-    }
 }
